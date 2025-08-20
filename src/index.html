@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gana en el Casino Online!</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'TU_PIXEL_ID'); // Reemplaza TU_PIXEL_ID por tu ID real
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+     
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-title">¡CARGÁ Y RETIRÁ LAS 24 HORAS!</h1>
+        <h2>¡Creá tu usuario AHORA pulsando <br> el siguiente boton!</h2>
+        <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="whatsapp-btn" id="whatsappBtn">          
+            <span>Contáctanos por WhatsApp</span>
+        </a>
+
+        <span>Te responderemos de inmediato!</span>
+    </header>
+
+    <section class="banner-section">
+        <img src="./assets/images/banner.png" alt="Banner Casino Online" class="banner-img">
+    </section>
+    
+
+    <section class="clientes-feedback">
+        <h2>Opiniones de nuestros clientes</h2>
+        <div class="feedback-list">
+            <article class="feedback-item">
+                <p class="feedback-text">"¡Terrible experiencia! El mejor casino online. El soporte es excelente y los slots estan tremendos."</p>
+                <span class="feedback-author">- Laura G.</span>
+            </article>
+            <article class="feedback-item">
+                <p class="feedback-text">"Me encanta la variedad de slots y ruletas que tienen, y la facilidad para retirar mis ganancias. Sin duda el mejor casino online que he probado."</p>
+                <span class="feedback-author">- Martín R.</span>
+            </article>
+            <article class="feedback-item">
+                <p class="feedback-text">"La atención al cliente es rápida y eficiente. Me ayudaron a resolver todas mis dudas. ¡Recomendado!"</p>
+                <span class="feedback-author">- Sofía P.</span>
+            </article>
+        </div>
+    </section>
+    <style>
+    
+    </style>
+
+    <footer>
+        <p>&copy; 2025 GanamosNet. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./scripts/main.js"></script>
+    <script>
+        // Evento Meta Pixel para el botón de WhatsApp
+        document.getElementById('whatsappBtn').addEventListener('click', function () {
+            fbq('track', 'Contact');
+        });
+    </script>
+</body>
+
+</html>
