@@ -308,17 +308,36 @@
             const message = "Hola! Quiero el regalo de bienvenida del 50%";
 
             // --- BOTÓN PRINCIPAL ---
+
             const whatsappBtn = document.getElementById("whatsapp-button");
             if (whatsappBtn) {
+                // Asegúrate de que no haya espacios extra en la URL
                 whatsappBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
                 whatsappBtn.addEventListener("click", function () {
                     try {
-                        fbq('track', 'Lead', { content_name: 'Registro', phone: whatsappNumber });
-                        fbq('trackCustom', 'Registro', { phone: whatsappNumber });
-                    } catch (_) { }
-                    this.setAttribute("href", `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
+                        fbq('track', 'Lead', {
+                            content_name: 'Botón WhatsApp - Registro',
+                            content_category: 'Contacto',
+                            phone_number: whatsappNumber
+                        });
+                    } catch (error) {
+                        console.warn("Evento de Meta Pixel no se disparó:", error);
+                        // El catch vacío oculta errores; mejor loguearlos en desarrollo
+                    }
                 });
             }
+
+            // const whatsappBtn = document.getElementById("whatsapp-button");
+            // if (whatsappBtn) {
+            //     whatsappBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            //     whatsappBtn.addEventListener("click", function () {
+            //         try {
+            //             fbq('track', 'Lead', { content_name: 'Registro', phone: whatsappNumber });
+            //         } catch (_) { }
+            //         this.setAttribute("href", `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
+            //     });
+            // }
 
             // --- LOGO WHATSAPP ---
             const waLogo = document.querySelector(".verified a");
