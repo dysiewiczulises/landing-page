@@ -340,16 +340,16 @@
             // }
 
             // --- LOGO WHATSAPP ---
-            const waLogo = document.querySelector(".verified a");
-            if (waLogo) {
-                waLogo.addEventListener("click", function () {
-                    try {
-                        fbq('track', 'Lead', { content_name: 'Registro', phone: whatsappNumber });
-                        fbq('trackCustom', 'Registro', { phone: whatsappNumber });
-                    } catch (_) { }
-                    this.setAttribute("href", `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
-                });
-            }
+            // const waLogo = document.querySelector(".verified a");
+            // if (waLogo) {
+            //     waLogo.addEventListener("click", function () {
+            //         try {
+            //             fbq('track', 'Lead', { content_name: 'Registro', phone: whatsappNumber });
+            //             fbq('trackCustom', 'Registro', { phone: whatsappNumber });
+            //         } catch (_) { }
+            //         this.setAttribute("href", `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
+            //     });
+            // }
         });
     </script>
 
